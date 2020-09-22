@@ -38,6 +38,7 @@ RUN apt-get update \
     && pip --disable-pip-version-check --no-cache-dir install matplotlib \
     && pip --disable-pip-version-check --no-cache-dir install pillow \	
     && pip --disable-pip-version-check --no-cache-dir install requests \
+    && pip --disable-pip-version-check --no-cache-dir install tqdm \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid $USER_GID $USERNAME \

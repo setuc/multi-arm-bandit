@@ -3,6 +3,7 @@ from Policies.UCB import UCB
 from Arms import Gaussian
 from Environment.MAB import MAB
 from Environment.Results import Result
+from tqdm import tqdm 
 
 policy = UCB(nbArms = 3)
 
@@ -18,7 +19,9 @@ env = MAB(armConfiguration)
 horizon = 1000
 results = Result(env.nbArms, horizon)
 
-for t in range(horizon):
+prettyRange = tqdm(range(horizon), desc="Time t")
+for t in prettyRange:
+        # 1. The player's policy choose an arm
         choice = policy.choice()
 
         # 2. A random reward is drawn, from this arm at this time
