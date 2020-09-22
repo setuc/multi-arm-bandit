@@ -1,11 +1,13 @@
 
 from Policies.UCB import UCB
+from Policies.EpsilonGreedy import EpsilonGreedy
 from Arms import Gaussian
 from Environment.MAB import MAB
 from Environment.Results import Result
 from tqdm import tqdm 
+from collections import Counter
 
-policy = UCB(nbArms = 3)
+policy = EpsilonGreedy(nbArms=3, epsilon=0.1)
 
 armConfiguration = [
             Gaussian(0.1),
@@ -33,6 +35,6 @@ for t in prettyRange:
         # 4. Finally we store the results
         results.store(t, choice, reward)
 
-
-print(results.choices)
-print(results.rewards)
+print(Counter(results.choices))
+# print(results.choices)
+# print(results.rewards)

@@ -30,7 +30,7 @@ class EpsilonGreedy(BasePolicy):
 
     def __init__(self, nbArms, epsilon=EPSILON, lower=0., amplitude=1.):
         super(EpsilonGreedy, self).__init__(nbArms, lower=lower, amplitude=amplitude)
-        # assert 0 <= epsilon <= 1, "Error: the 'epsilon' parameter for EpsilonGreedy class has to be in [0, 1]."  # DEBUG
+        assert 0 <= epsilon <= 1, "Error: the 'epsilon' parameter for EpsilonGreedy class has to be in [0, 1]."  # DEBUG
         self._epsilon = epsilon
 
     @property
@@ -45,7 +45,7 @@ class EpsilonGreedy(BasePolicy):
         With a probability of epsilon, explore (uniform choice), otherwhise exploit based on just accumulated *rewards* (not empirical mean rewards).
         """
         if with_proba(self.epsilon):  # Proba epsilon : explore
-            return rn.randint(0, self.nbArms - 1)
+            return rn.randint(0, self.nbArms)
         else:  # Proba 1 - epsilon : exploit
             # Uniform choice among the best arms
             # biased_means = self.rewards / (1 + self.pulls)
