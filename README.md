@@ -1,6 +1,9 @@
 # multi-arm-bandit
 This is the code that we are working through in the live session on Twitch ![Twitch](https://img.shields.io/twitch/status/setuchokshi) and YouTube ![YouTube](https://img.shields.io/youtube/likes/syL570kiND8?style=social)
 
+This library is based on the popular MAB Library from Lilian Besson’s [SMPyBandits](https://github.com/SMPyBandits/SMPyBandits). A lot has been simplified to support the teaching of multi arm bandit concepts. 
+
+
 ## Setup on Gitpod
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/setuc/multi-arm-bandit)
 
