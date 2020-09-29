@@ -4,5 +4,6 @@ if __name__ != "__main__":
     from .Constant import Constant
     from .Uniform import Uniform
     from .Gaussian import Gaussian
+    from .Bernoulli import Bernoulli
 
     

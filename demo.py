@@ -1,7 +1,7 @@
 
 from Policies.UCB import UCB
 from Policies.EpsilonGreedy import EpsilonGreedy
-from Arms import Gaussian
+from Arms import Gaussian, Bernoulli
 from Environment.MAB import MAB
 from Environment.Results import Result
 from tqdm import tqdm 
@@ -14,9 +14,9 @@ policy = EpsilonGreedy(nbArms=3, epsilon=0.1)
 policy = UCB(nbArms=3)
 
 armConfiguration = [
-            Gaussian(0.1),
-            Gaussian(0.5),
-            Gaussian(0.9),
+            Bernoulli(0.1),
+            Bernoulli(0.5),
+            Bernoulli(0.9),
         ]
 
 
