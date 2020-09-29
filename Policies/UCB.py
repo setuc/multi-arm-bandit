@@ -5,7 +5,6 @@
 
 from math import sqrt, log
 import numpy as np
-np.seterr(divide='ignore')  # XXX dangerous in general, controlled here!
 
 try:
     from .IndexPolicy import IndexPolicy

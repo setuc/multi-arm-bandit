@@ -6,8 +6,12 @@ from Environment.MAB import MAB
 from Environment.Results import Result
 from tqdm import tqdm 
 from collections import Counter
+import matplotlib.pyplot as plt 
+import numpy as np
+
 
 policy = EpsilonGreedy(nbArms=3, epsilon=0.1)
+policy = UCB(nbArms=3)
 
 armConfiguration = [
             Gaussian(0.1),
@@ -18,7 +22,7 @@ armConfiguration = [
 
 env = MAB(armConfiguration)
 
-horizon = 1000
+horizon = 10000
 results = Result(env.nbArms, horizon)
 
 prettyRange = tqdm(range(horizon), desc="Time t")
@@ -38,3 +42,8 @@ for t in prettyRange:
 print(Counter(results.choices))
 # print(results.choices)
 # print(results.rewards)
+
+plot_x = np.arange(1, 1 + horizon)
+plot_y = np.cumsum(results.rewards) / plot_x
+plt.plot(plot_x, plot_y)
+plt.savefig("rewards.png")
