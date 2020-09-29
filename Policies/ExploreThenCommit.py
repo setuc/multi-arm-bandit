@@ -11,6 +11,9 @@ except ImportError:
     from BasePolicy import BasePolicy
     from with_proba import with_proba
 
+# default value for the gap
+GAP = 0.1
+
 
 class ETC_KnownGap(EpsilonGreedy):
     r""" 
