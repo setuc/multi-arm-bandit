@@ -1,8 +1,11 @@
 # multi-arm-bandit
-This is the code that we are working through in the live session on Twitch ![Twitch](https://img.shields.io/twitch/status/setuchokshi) and YouTube ![YouTube](https://img.shields.io/youtube/likes/syL570kiND8?style=social)
+This is the code that we are working through in the live session on Twitch ![Twitch](https://img.shields.io/twitch/status/setuchokshi) and YouTube ![YouTube](https://img.shields.io/youtube/likes/_VvnEu_2i2k?style=social)
 
 This library is based on the popular MAB Library from Lilian Besson’s [SMPyBandits](https://github.com/SMPyBandits/SMPyBandits). A lot has been simplified to support the teaching of multi arm bandit concepts. 
 
+## YouTube Videos
+1. Part 1 on [YouTube](https://youtu.be/_VvnEu_2i2k?t=275)
+2. Part 2 on [YouTube](https://youtu.be/mqtt8PJoa4c) Scheduled on 29-September-2020, 7pm GMT
 
 ## Setup on Gitpod
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/setuc/multi-arm-bandit)
@@ -29,3 +32,4 @@ To set up a Visual Studio Codespace:
     - After a few minutes, a file named **z REFRESH NOW!** will appear at the bottom of the list of files. This is your indication that everything has been installed.
 5. After the **z REFRESH NOW!** file has appeared, ***refresh the web page*** to ensure all of the required extensions are loaded and set the color scheme to a light background. Then you're ready to start.
 6. After you have refreshed the web page, you can close the **Welcome** panes and delete the **z REFRESH NOW** file if you want to. You can also change the color scheme to suit your preference - just click the **&#9881;** icon at the bottom left and select a new **Color Theme**. A light color theme is recommended to make it easier to read the Python code in the notebooks.
+
