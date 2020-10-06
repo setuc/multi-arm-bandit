@@ -1,6 +1,7 @@
 
 from Policies.UCB import UCB
 from Policies.EpsilonGreedy import EpsilonGreedy
+from Policies.Thompson import Thompson
 from Arms import Gaussian, Bernoulli
 from Environment.MAB import MAB
 from Environment.Results import Result
@@ -12,6 +13,7 @@ import numpy as np
 
 policy = EpsilonGreedy(nbArms=3, epsilon=0.1)
 policy = UCB(nbArms=3)
+policy = Thompson(nbArms=3)
 
 armConfiguration = [
             Bernoulli(0.1),
