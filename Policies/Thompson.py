@@ -2,7 +2,7 @@
 
 
 try:
-    from .BayesianIndexPolicy import BasePolicy
+    from .BayesianIndexPolicy import BayesianIndexPolicy
 except (ImportError, SystemError):
     from BayesianIndexPolicy import BayesianIndexPolicy
 
