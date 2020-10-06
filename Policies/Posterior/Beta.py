@@ -12,14 +12,14 @@ try:
     from numpy.random import beta as betavariate  # Faster! Yes!
 except ImportError:
     from random import betavariate
-from scipy.special import btdtri
+
 
 # Local imports
 try:
     from .Posterior import Posterior
 
     from .with_proba import with_proba
-except (ImportError, SystemError):
+except:
     from Posterior import Posterior
 
     from with_proba import with_proba
@@ -73,13 +73,7 @@ class Beta(Posterior):
         """
         return betavariate(self.N[1], self.N[0])
 
-    def quantile(self, p):
-        """Return the p quantile of the Beta posterior (using :func:`scipy.stats.btdtri`).
-        - Used only by :class:`BayesUCB` and :class:`AdBandits` so far.
-        """
-        return btdtri(self.N[1], self.N[0], p)
-        # Bug: do not call btdtri with (0.5,0.5,0.5) in scipy version < 0.9 (old)
-
+    
     def mean(self):
         """Compute the mean of the Beta posterior (should be useless)."""
         return self.N[1] / float(sum(self.N))

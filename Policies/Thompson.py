@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from BayesianIndexPolicy import BayesianIndexPolicy
+
+try:
+    from .BayesianIndexPolicy import BasePolicy
+except (ImportError, SystemError):
+    from BayesianIndexPolicy import BayesianIndexPolicy
+
 
 class Thompson(BayesianIndexPolicy):
     """

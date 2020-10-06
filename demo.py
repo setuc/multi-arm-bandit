@@ -13,7 +13,9 @@ import numpy as np
 
 policy = EpsilonGreedy(nbArms=3, epsilon=0.1)
 policy = UCB(nbArms=3)
-policy = Thompson(nbArms=3)
+prior_failures  = a = 100
+prior_successes = b = 50
+policy = Thompson(nbArms=2, a=a, b=b)
 
 armConfiguration = [
             Bernoulli(0.1),
